@@ -259,7 +259,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 body {
-  background-image: -webkit-radial-gradient(#cde6f9, #81a8cb);
+  background-image: -webkit-radial-gradient(#cde6f9 70%, #81a8cb 90%);
 }
 
 .main-container, .main-container .image-container img, .main-container .text-container {
