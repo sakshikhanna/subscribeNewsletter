@@ -1,3 +1,45 @@
-p{
-	color:$black;
+* {
+    box-sizing:border-box;
+}
+body{
+	background-image: -webkit-radial-gradient(#cde6f9, #81a8cb);
+}
+%vertical-align-container{
+	position: relative;
+	top: 50%;
+    transform: translateY(-50%);
+}
+.main-container{
+	@extend %vertical-align-container;
+	position: relative;
+	overflow: hidden;
+	background-color: $white;
+	width: 70%;
+	height: 70%;
+	margin:auto;
+	.image-container{
+		float: left;
+		width: 40%;
+		height: 100%;
+		img{
+			@extend %vertical-align-container;
+			width: 100%;
+			padding: 50px;
+		}
+	}
+	.text-container{
+		float:right;
+		width: 60%;
+		margin-top: 10%;
+		padding:5%;
+		.text-heading{
+			@extend .big-text;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		.text-content{
+			@extend .normal-text;
+			line-height: 1.5;
+		}
+	}
 }

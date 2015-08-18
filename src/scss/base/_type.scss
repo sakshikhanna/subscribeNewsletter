@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Mandali);
+$text-font  : 'WorkSans-Regular',sans-serif;
+$heading-font : 'WorkSans-SemiBold',sans-serif;
+.small-text{
+    font-size: 10px;
+}
+
+.normal-text {
+    font-size: 12px;
+    font-family: $text-font;
+}
+
+.big-text {
+    font-size: 15px;
+	font-family: $heading-font;
+}
