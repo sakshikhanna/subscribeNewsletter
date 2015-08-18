@@ -1,10 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Mandali);
-.small-text {
-  font-size: 10px;
+.very-small-text, .main-container .text-container .email-fotter {
+  font-size: 9px;
+  font-family: "WorkSans-Regular", sans-serif;
 }
 
-.normal-text, .main-container .text-container .text-content {
+.small-text, .main-container .text-container .email-heading {
+  font-size: 10px;
+  font-family: "WorkSans-Regular", sans-serif;
+}
+
+.normal-text, .main-container .text-container .text-content, .main-container .textbox-btn-container .email-textbox .email-text, .main-container .textbox-btn-container .btn-container a {
   font-size: 12px;
   font-family: "WorkSans-Regular", sans-serif;
 }
@@ -256,10 +262,19 @@ body {
   background-image: -webkit-radial-gradient(#cde6f9, #81a8cb);
 }
 
-.main-container, .main-container .image-container img {
+.main-container, .main-container .image-container img, .main-container .text-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.main-container .textbox-btn-container .btn-container .subscribe-btn {
+  cursor: pointer;
+  line-height: 3;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .main-container {
@@ -280,17 +295,55 @@ body {
   padding: 50px;
 }
 .main-container .text-container {
+  position: relative;
+  overflow: hidden;
   float: right;
   width: 60%;
-  margin-top: 10%;
-  padding: 5%;
+  padding-right: 10%;
+  line-height: 1.5;
 }
 .main-container .text-container .text-heading {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 .main-container .text-container .text-content {
-  line-height: 1.5;
+  color: #525151;
+  padding-right: 10%;
+}
+.main-container .text-container .email-heading {
+  padding-top: 20px;
+  color: #636262;
+}
+.main-container .text-container .email-fotter {
+  padding-top: 40px;
+  color: #a9a1a1;
+}
+.main-container .textbox-btn-container .email-textbox {
+  float: left;
+  width: 60%;
+}
+.main-container .textbox-btn-container .email-textbox .email-text {
+  border: 1px solid #a9a1a1;
+  margin: 5px 0;
+  line-height: 2;
+  width: 90%;
+  outline: none;
+  color: #636262;
+}
+.main-container .textbox-btn-container .btn-container {
+  float: right;
+  width: 40%;
+}
+.main-container .textbox-btn-container .btn-container a {
+  text-decoration: none;
+  color: #232323;
+}
+.main-container .textbox-btn-container .btn-container .subscribe-btn {
+  width: 175px;
+  font-family: "WorkSans-SemiBold", sans-serif;
+  font-weight: 700;
+  border: 1px solid #ffc52f;
+  background-color: #ffc52f;
 }
 
 /*# sourceMappingURL=compiled.css.map */

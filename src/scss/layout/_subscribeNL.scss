@@ -9,6 +9,14 @@ body{
 	top: 50%;
     transform: translateY(-50%);
 }
+%big-btn{
+	cursor: pointer;
+	line-height: 3;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
 .main-container{
 	@extend %vertical-align-container;
 	position: relative;
@@ -17,6 +25,7 @@ body{
 	width: 70%;
 	height: 70%;
 	margin:auto;
+
 	.image-container{
 		float: left;
 		width: 40%;
@@ -28,18 +37,65 @@ body{
 		}
 	}
 	.text-container{
+		@extend %vertical-align-container;
+		position: relative;
+		overflow: hidden;
 		float:right;
-		width: 60%;
-		margin-top: 10%;
-		padding:5%;
+		width: 60%;		
+		padding-right: 10%;
+		line-height: 1.5;
 		.text-heading{
-			@extend .big-text;
+			@extend .big-text;			
 			letter-spacing: 2px;
 			text-transform: uppercase;
 		}
 		.text-content{
 			@extend .normal-text;
-			line-height: 1.5;
+			color:$greyish-black;
+			padding-right: 10%;
+		}
+		.email-heading{
+			@extend .small-text;
+			padding-top: 20px;
+			color:$brownish-grey;
+		}
+		.email-fotter{
+			@extend .very-small-text;
+			padding-top: 40px;
+			color:$greyish;
+		}
+
+	}
+	.textbox-btn-container{
+		.email-textbox{
+			float:left;
+			width: 60%;
+			.email-text{
+				@extend .normal-text;
+				border: 1px solid $greyish;
+				margin:5px 0;
+				line-height: 2;
+				width: 90%;	
+				outline: none;	
+				color:$brownish-grey;			
+			}			 
+		}
+		.btn-container{
+			float: right;
+			width: 40%;
+			a{
+				@extend .normal-text;
+				text-decoration: none;
+				color:$black;				
+			}
+			.subscribe-btn{
+				@extend %big-btn;
+				width: 175px;
+				font-family: $heading-font;
+				font-weight: 700;
+				border: 1px solid $sun-yellow;
+				background-color: $sun-yellow;				
+			}			
 		}
 	}
 }
