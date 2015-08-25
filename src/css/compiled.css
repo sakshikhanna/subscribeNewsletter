@@ -344,12 +344,19 @@ body {
 .main-container .textbox-btn-container .btn-container a {
   text-decoration: none;
   color: #232323;
+  outline: none;
 }
 .main-container .textbox-btn-container .btn-container .subscribe-btn {
   width: 100%;
   font-family: "WorkSans-SemiBold", sans-serif;
   font-weight: 700;
   border: 1px solid #ffc52f;
+  background-color: #ffd15d;
+  transition-property: background-color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+.main-container .textbox-btn-container .btn-container .subscribe-btn:hover {
   background-color: #ffc52f;
 }
 

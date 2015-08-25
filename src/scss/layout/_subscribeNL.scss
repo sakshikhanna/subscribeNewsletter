@@ -97,7 +97,9 @@ body{
 			a{
 				@extend .normal-text;
 				text-decoration: none;
-				color:$black;				
+				color:$black;	
+				outline:none;
+
 			}
 			.subscribe-btn{
 				@extend %big-btn;
@@ -105,8 +107,17 @@ body{
 				font-family: $heading-font;
 				font-weight: 700;
 				border: 1px solid $sun-yellow;
-				background-color: $sun-yellow;				
+				background-color: $sun-yellow-light;
+				transition-property: background-color;
+				transition-duration: .2s;
+				transition-timing-function: linear;
+				&:hover{
+					background-color:$sun-yellow;
+				}				
 			}			
 		}
+		
 	}
 }
+
+
