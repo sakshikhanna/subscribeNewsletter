@@ -101,7 +101,7 @@ body{
 			}
 			.subscribe-btn{
 				@extend %big-btn;
-				width: 175px;
+				width: 100%;
 				font-family: $heading-font;
 				font-weight: 700;
 				border: 1px solid $sun-yellow;

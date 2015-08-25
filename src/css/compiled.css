@@ -346,7 +346,7 @@ body {
   color: #232323;
 }
 .main-container .textbox-btn-container .btn-container .subscribe-btn {
-  width: 175px;
+  width: 100%;
   font-family: "WorkSans-SemiBold", sans-serif;
   font-weight: 700;
   border: 1px solid #ffc52f;
