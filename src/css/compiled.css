@@ -330,6 +330,9 @@ body {
   outline: none;
   color: #636262;
 }
+.main-container .textbox-btn-container .email-textbox .error {
+  border: 2px solid red;
+}
 .main-container .textbox-btn-container .btn-container {
   float: right;
   width: 40%;
@@ -344,6 +347,11 @@ body {
   font-weight: 700;
   border: 1px solid #ffc52f;
   background-color: #ffc52f;
+}
+
+.valid {
+  color: green;
+  border: 5px solid green;
 }
 
 /*# sourceMappingURL=compiled.css.map */

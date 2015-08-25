@@ -79,7 +79,10 @@ body{
 				width: 90%;	
 				outline: none;	
 				color:$brownish-grey;			
-			}			 
+			}
+			.error {
+		      	border:2px solid red;
+		   }			 
 		}
 		.btn-container{
 			float: right;
@@ -100,3 +103,9 @@ body{
 		}
 	}
 }
+
+
+    .valid {
+      color:green;
+      border:5px solid green;
+    }
