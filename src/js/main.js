@@ -23,7 +23,9 @@
 
     $("#email").validEmail({on:"blur", success:function(){
       $(this).removeClass("error");
+      $('.email-validation p').empty();
     }, failure:function(){
       // console.log('2');
       $(this).addClass("error");
+      $('.email-validation p').text('Invalid Email Id');
     }});

@@ -10,7 +10,7 @@
   font-family: "WorkSans-Regular", sans-serif;
 }
 
-.normal-text, .main-container .text-container .text-content, .main-container .textbox-btn-container .email-textbox .email-text, .main-container .textbox-btn-container .btn-container a {
+.normal-text, .main-container .text-container .text-content, .main-container .text-container .email-validation, .main-container .textbox-btn-container .email-textbox .email-text, .main-container .textbox-btn-container .btn-container a {
   font-size: 12px;
   font-family: "WorkSans-Regular", sans-serif;
 }
@@ -318,6 +318,10 @@ body {
   padding-top: 40px;
   color: #a9a1a1;
 }
+.main-container .text-container .email-validation {
+  line-height: 0;
+  color: red;
+}
 .main-container .textbox-btn-container .email-textbox {
   float: left;
   width: 60%;
@@ -347,11 +351,6 @@ body {
   font-weight: 700;
   border: 1px solid #ffc52f;
   background-color: #ffc52f;
-}
-
-.valid {
-  color: green;
-  border: 5px solid green;
 }
 
 /*# sourceMappingURL=compiled.css.map */

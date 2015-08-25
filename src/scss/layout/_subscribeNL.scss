@@ -65,9 +65,16 @@ body{
 			padding-top: 40px;
 			color:$greyish;
 		}
+		.email-validation{
+			@extend .normal-text;
+			line-height: 0;
+			color: red;
+			// border: 1px solid;
+		}
 
 	}
 	.textbox-btn-container{
+
 		.email-textbox{
 			float:left;
 			width: 60%;
@@ -82,7 +89,7 @@ body{
 			}
 			.error {
 		      	border:2px solid red;
-		   }			 
+		   }
 		}
 		.btn-container{
 			float: right;
@@ -103,9 +110,3 @@ body{
 		}
 	}
 }
-
-
-    .valid {
-      color:green;
-      border:5px solid green;
-    }
