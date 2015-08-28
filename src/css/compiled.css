@@ -1,22 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Mandali);
 .very-small-text, .main-container .text-container .email-fotter {
-  font-size: 9px;
+  font-size: 0.57295em;
   font-family: "WorkSans-Regular", sans-serif;
 }
 
 .small-text, .main-container .text-container .email-heading {
-  font-size: 10px;
+  font-size: 0.92705em;
   font-family: "WorkSans-Regular", sans-serif;
 }
 
 .normal-text, .main-container .text-container .text-content, .main-container .text-container .email-validation, .main-container .textbox-btn-container .email-textbox .email-text, .main-container .textbox-btn-container .btn-container a {
-  font-size: 12px;
+  font-size: 0.92705em;
   font-family: "WorkSans-Regular", sans-serif;
 }
 
 .big-text, .main-container .text-container .text-heading {
-  font-size: 15px;
+  font-size: 1.5em;
   font-family: "WorkSans-SemiBold", sans-serif;
 }
 

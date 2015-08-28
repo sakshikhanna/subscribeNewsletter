@@ -2,21 +2,32 @@
 @import url(http://fonts.googleapis.com/css?family=Mandali);
 $text-font  : 'WorkSans-Regular',sans-serif;
 $heading-font : 'WorkSans-SemiBold',sans-serif;
+
+$ms-base: 1.5em;
+$ms-ratio: $golden;
+
+
+
+
+
 .very-small-text{
-    font-size: 9px;
+    font-size: ms(-2);
     font-family: $text-font;
 }
 .small-text{
-    font-size: 10px;
+    // font-size: 10px;
+     font-size: ms(-1);
     font-family: $text-font;
 }
 
 .normal-text {
-    font-size: 12px;
+    // font-size: 12px;
+    font-size: ms(-1);
     font-family: $text-font;
 }
 
 .big-text {
-    font-size: 15px;
+    // font-size: 15px;
+     font-size: ms(0);
 	font-family: $heading-font;
 }
