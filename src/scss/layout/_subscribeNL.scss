@@ -11,6 +11,8 @@ body{
     transform: translateY(-50%);
 }
 %big-btn{
+	// @extend .small-text;
+font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 	cursor: pointer;
 	line-height: 3;
 	letter-spacing: 2px;
@@ -34,7 +36,8 @@ body{
 		img{
 			@extend %vertical-align-container;
 			width: 100%;
-			padding: 50px;
+			// padding: 50px;
+			padding: ms( 1 );
 		}
 	}
 	.text-container{
@@ -43,7 +46,8 @@ body{
 		overflow: hidden;
 		float:right;
 		width: 60%;		
-		padding-right: 10%;
+		// padding-right: 10%;
+		padding-right: ms( 2 );
 		line-height: 1.5;
 		.text-heading{
 			@extend .big-text;			
@@ -53,14 +57,17 @@ body{
 		.text-content{
 			@extend .normal-text;
 			color:$greyish-black;
-			padding-right: 10%;
+			// padding-right: 10%;
+			padding-right: ms( 2 );
 		}
 		.email-heading{
 			@extend .small-text;
-			padding-top: 20px;
+			// padding-top: 20px;
+			padding-top: ms( 0 );
 			color:$brownish-grey;
 		}
 		.email-fotter{
+			// border: 1px solid;
 			@extend .very-small-text;
 			padding-top: 40px;
 			color:$greyish;
@@ -79,7 +86,7 @@ body{
 			float:left;
 			width: 60%;
 			.email-text{
-				@extend .normal-text;
+				// @extend .normal-text;
 				border: 1px solid $greyish;
 				margin:5px 0;
 				line-height: 2;
@@ -95,7 +102,7 @@ body{
 			float: right;
 			width: 40%;
 			a{
-				@extend .normal-text;
+				
 				text-decoration: none;
 				color:$black;	
 				outline:none;

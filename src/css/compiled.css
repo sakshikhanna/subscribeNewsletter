@@ -10,7 +10,7 @@
   font-family: "WorkSans-Regular", sans-serif;
 }
 
-.normal-text, .main-container .text-container .text-content, .main-container .text-container .email-validation, .main-container .textbox-btn-container .email-textbox .email-text, .main-container .textbox-btn-container .btn-container a {
+.normal-text, .main-container .text-container .text-content, .main-container .text-container .email-validation {
   font-size: 0.92705em;
   font-family: "WorkSans-Regular", sans-serif;
 }
@@ -269,6 +269,7 @@ body {
 }
 
 .main-container .textbox-btn-container .btn-container .subscribe-btn {
+  font-size: 0.95492em;
   cursor: pointer;
   line-height: 3;
   letter-spacing: 2px;
@@ -292,14 +293,14 @@ body {
 }
 .main-container .image-container img {
   width: 100%;
-  padding: 50px;
+  padding: 2.42705em;
 }
 .main-container .text-container {
   position: relative;
   overflow: hidden;
   float: right;
   width: 60%;
-  padding-right: 10%;
+  padding-right: 3.92705em;
   line-height: 1.5;
 }
 .main-container .text-container .text-heading {
@@ -308,10 +309,10 @@ body {
 }
 .main-container .text-container .text-content {
   color: #525151;
-  padding-right: 10%;
+  padding-right: 3.92705em;
 }
 .main-container .text-container .email-heading {
-  padding-top: 20px;
+  padding-top: 1.5em;
   color: #636262;
 }
 .main-container .text-container .email-fotter {
@@ -351,7 +352,7 @@ body {
   font-family: "WorkSans-SemiBold", sans-serif;
   font-weight: 700;
   border: 1px solid #ffc52f;
-  background-color: #ffd15d;
+  background-color: #FFDE8D;
   transition-property: background-color;
   transition-duration: .2s;
   transition-timing-function: linear;
