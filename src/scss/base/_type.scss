@@ -28,3 +28,12 @@ $ms-ratio: $golden;
      font-size: ms(0);
 	font-family: $heading-font;
 }
+html {
+    font-size: 16px;
+    @include media( '>phone', '<=desktop' ) {
+        font-size: 14px;
+    }
+    @include media ( '<=phone' ) {
+        font-size: 16px;
+    }
+}

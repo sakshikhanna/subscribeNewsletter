@@ -1,25 +1,18 @@
 * {
     box-sizing:border-box;
 }
+
 body{
 	background-image: -webkit-radial-gradient(#cde6f9 70%, #81a8cb 90%);
 
 }
+
 %vertical-align-container{
 	position: relative;
 	top: 50%;
     transform: translateY(-50%);
 }
-%big-btn{
-	// @extend .small-text;
-font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
-	cursor: pointer;
-	line-height: 3;
-	letter-spacing: 2px;
-	text-align: center;
-	text-transform: uppercase;
-	border-radius: 4px;
-}
+
 .main-container{
 	@extend %vertical-align-container;
 	position: relative;
@@ -27,28 +20,60 @@ font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 	background-color: $white;
 	width: 70%;
 	height: 70%;
-	margin:auto;
-
-	.image-container{
-		float: left;
-		width: 40%;
-		height: 100%;
-		img{
-			@extend %vertical-align-container;
-			width: 100%;
-			// padding: 50px;
-			padding: ms( 1 );
-		}
+	@include media(">=500px", "<700px") {
+		width: 80%;
 	}
+	@include media("<500px") {
+		width: 80%;
+		height: 80%;
+	}
+	margin:auto;
+	@include media(">500px") {
+		.image-container{
+			float: left;
+			width: 40%;
+			height: 100%;
+			img{
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+				padding: 30px;
+			}
+		}
+	}	
+	@include media("<500px") {
+		.image-container{
+			margin: auto;
+			margin-top:20px;
+			width: 30%;
+			// border: 1px solid;
+			img{
+				position: relative;
+				width: 100%;
+				margin: auto;
+			}
+		}
+	}	
 	.text-container{
-		@extend %vertical-align-container;
-		position: relative;
-		overflow: hidden;
-		float:right;
-		width: 60%;		
-		// padding-right: 10%;
-		padding-right: ms( 2 );
 		line-height: 1.5;
+		@include media(">500px") {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			position: relative;
+			overflow: hidden;
+			float:right;
+			width: 60%;		
+			padding-right: 5%;
+		}		
+		@include media("<500px") {
+			text-align: center;
+		}
+		@include media(">=500px", "<700px") {			
+			padding-right: 10px;
+		}
+		
 		.text-heading{
 			@extend .big-text;			
 			letter-spacing: 2px;
@@ -58,33 +83,49 @@ font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 			@extend .normal-text;
 			color:$greyish-black;
 			// padding-right: 10%;
-			padding-right: ms( 2 );
+			@include media(">500px") {
+				padding-right: ms( 2 );
+			}
 		}
 		.email-heading{
 			@extend .small-text;
 			// padding-top: 20px;
 			padding-top: ms( 0 );
 			color:$brownish-grey;
+			@include media("<500px") {
+				text-align: left;
+				padding-top: 10px;
+				padding-left: 10px;
+			}
 		}
 		.email-fotter{
 			// border: 1px solid;
 			@extend .very-small-text;
 			padding-top: 40px;
 			color:$greyish;
+			@include media("<500px") {
+				text-align: left;
+				// padding-top: 0;
+				padding-left: 10px;
+			}
 		}
 		.email-validation{
 			@extend .normal-text;
 			line-height: 0;
 			color: red;
 			// border: 1px solid;
-		}
-
+		}		
 	}
+	
 	.textbox-btn-container{
 
 		.email-textbox{
 			float:left;
 			width: 60%;
+			@include media(">=500px", "<750px") {
+				width: 55%;				
+			}
+			// margin-right: 10px;
 			.email-text{
 				// @extend .normal-text;
 				border: 1px solid $greyish;
@@ -98,7 +139,24 @@ font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 		      	border:2px solid red;
 		   }
 		}
-		.btn-container{
+		.subscribe-btn {
+		    @extend .e-btn-outline;
+		    float: right;
+		    width: 40%;
+		    @include media(">=500px", "<750px") {
+				width: 45%;				
+			}
+			@include media( "<550px") {
+				letter-spacing: 1px;
+				padding: 7px;
+			}
+			@include media( "<500px") {
+				width: 35%;
+				margin-right: 5%;
+			}
+		    // margin-right: 10px;
+		  }
+		/*.btn-container{
 			float: right;
 			width: 40%;
 			a{
@@ -110,7 +168,7 @@ font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 			}
 			.subscribe-btn{
 				@extend %big-btn;
-				width: 100%;
+				width: 150px;
 				font-family: $heading-font;
 				font-weight: 700;
 				border: 1px solid $sun-yellow;
@@ -122,9 +180,10 @@ font-size: ms(-2, 2.5em, $golden); // Same as above but on an octave scale
 					background-color:$sun-yellow;
 				}				
 			}			
-		}
+		}*/
 		
 	}
 }
+
 
 

@@ -6,10 +6,33 @@ $sun-yellow:#ffc52f;
 $brownish-grey:#636262;
 $white:#ffffff;
 $greyish-black:#525151;
-$greyish-black-dark:#979797
+$greyish-black-dark:#979797;
 
 
-
+.btn-common {
+	font-size: ms(-2, 2.5em, $golden);
+	font-weight: 700;
+    transition : 0.5s all ease-in-out;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.e-btn-outline {
+    @extend .btn-common;
+    text-transform: capitalize;
+    border: 1px solid $sun-yellow;
+    color: black;
+    background-color: $sun-yellow-light;
+    padding: 10px;
+    &:hover {
+        border-color: darken( $sun-yellow, 20% );
+        color: darken( black, 20% );
+        background-color : darken($sun-yellow-light,10% );
+    }
+}
 
 
 

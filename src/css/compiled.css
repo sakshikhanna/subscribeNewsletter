@@ -1,5 +1,30 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Mandali);
+.btn-common, .e-btn-outline, .main-container .textbox-btn-container .subscribe-btn {
+  font-size: 0.95492em;
+  font-weight: 700;
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.e-btn-outline, .main-container .textbox-btn-container .subscribe-btn {
+  text-transform: capitalize;
+  border: 1px solid #ffc52f;
+  color: black;
+  background-color: #FFDE8D;
+  padding: 10px;
+}
+.e-btn-outline:hover, .main-container .textbox-btn-container .subscribe-btn:hover {
+  border-color: #c89000;
+  color: black;
+  background-color: #ffcf5a;
+}
+
 .very-small-text, .main-container .text-container .email-fotter {
   font-size: 0.57295em;
   font-family: "WorkSans-Regular", sans-serif;
@@ -18,6 +43,21 @@
 .big-text, .main-container .text-container .text-heading {
   font-size: 1.5em;
   font-family: "WorkSans-SemiBold", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 321px) and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 article,
@@ -262,20 +302,10 @@ body {
   background-image: -webkit-radial-gradient(#cde6f9 70%, #81a8cb 90%);
 }
 
-.main-container, .main-container .image-container img, .main-container .text-container {
+.main-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.main-container .textbox-btn-container .btn-container .subscribe-btn {
-  font-size: 0.95492em;
-  cursor: pointer;
-  line-height: 3;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 4px;
 }
 
 .main-container {
@@ -286,47 +316,144 @@ body {
   height: 70%;
   margin: auto;
 }
-.main-container .image-container {
-  float: left;
-  width: 40%;
-  height: 100%;
+@media (min-width: 500px) and (max-width: 699px) {
+  .main-container {
+    width: 80%;
+  }
 }
-.main-container .image-container img {
-  width: 100%;
-  padding: 2.42705em;
+
+@media (max-width: 499px) {
+  .main-container {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 501px) {
+  .main-container .image-container {
+    float: left;
+    width: 40%;
+    height: 100%;
+  }
+  .main-container .image-container img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 30px;
+  }
+}
+@media (max-width: 499px) {
+  .main-container .image-container {
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+  }
+  .main-container .image-container img {
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
 }
 .main-container .text-container {
-  position: relative;
-  overflow: hidden;
-  float: right;
-  width: 60%;
-  padding-right: 3.92705em;
   line-height: 1.5;
 }
+@media (min-width: 501px) {
+  .main-container .text-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    overflow: hidden;
+    float: right;
+    width: 60%;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 499px) {
+  .main-container .text-container {
+    text-align: center;
+  }
+}
+@media (min-width: 500px) and (max-width: 699px) {
+  .main-container .text-container {
+    padding-right: 10px;
+  }
+}
+
 .main-container .text-container .text-heading {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 .main-container .text-container .text-content {
   color: #525151;
-  padding-right: 3.92705em;
+}
+@media (min-width: 501px) {
+  .main-container .text-container .text-content {
+    padding-right: 3.92705em;
+  }
 }
 .main-container .text-container .email-heading {
   padding-top: 1.5em;
   color: #636262;
 }
+@media (max-width: 499px) {
+  .main-container .text-container .email-heading {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
 .main-container .text-container .email-fotter {
   padding-top: 40px;
   color: #a9a1a1;
+}
+@media (max-width: 499px) {
+  .main-container .text-container .email-fotter {
+    text-align: left;
+    padding-left: 10px;
+  }
 }
 .main-container .text-container .email-validation {
   line-height: 0;
   color: red;
 }
+.main-container .textbox-btn-container {
+  		/*.btn-container{
+  			float: right;
+  			width: 40%;
+  			a{
+  				
+  				text-decoration: none;
+  				color:$black;	
+  				outline:none;
+  
+  			}
+  			.subscribe-btn{
+  				@extend %big-btn;
+  				width: 150px;
+  				font-family: $heading-font;
+  				font-weight: 700;
+  				border: 1px solid $sun-yellow;
+  				background-color: $sun-yellow-light;
+  				transition-property: background-color;
+  				transition-duration: .2s;
+  				transition-timing-function: linear;
+  				&:hover{
+  					background-color:$sun-yellow;
+  				}				
+  			}			
+  		}*/
+}
 .main-container .textbox-btn-container .email-textbox {
   float: left;
   width: 60%;
 }
+@media (min-width: 500px) and (max-width: 749px) {
+  .main-container .textbox-btn-container .email-textbox {
+    width: 55%;
+  }
+}
+
 .main-container .textbox-btn-container .email-textbox .email-text {
   border: 1px solid #a9a1a1;
   margin: 5px 0;
@@ -338,27 +465,27 @@ body {
 .main-container .textbox-btn-container .email-textbox .error {
   border: 2px solid red;
 }
-.main-container .textbox-btn-container .btn-container {
+.main-container .textbox-btn-container .subscribe-btn {
   float: right;
   width: 40%;
 }
-.main-container .textbox-btn-container .btn-container a {
-  text-decoration: none;
-  color: #232323;
-  outline: none;
+@media (min-width: 500px) and (max-width: 749px) {
+  .main-container .textbox-btn-container .subscribe-btn {
+    width: 45%;
+  }
 }
-.main-container .textbox-btn-container .btn-container .subscribe-btn {
-  width: 100%;
-  font-family: "WorkSans-SemiBold", sans-serif;
-  font-weight: 700;
-  border: 1px solid #ffc52f;
-  background-color: #FFDE8D;
-  transition-property: background-color;
-  transition-duration: .2s;
-  transition-timing-function: linear;
+
+@media (max-width: 549px) {
+  .main-container .textbox-btn-container .subscribe-btn {
+    letter-spacing: 1px;
+    padding: 7px;
+  }
 }
-.main-container .textbox-btn-container .btn-container .subscribe-btn:hover {
-  background-color: #ffc52f;
+@media (max-width: 499px) {
+  .main-container .textbox-btn-container .subscribe-btn {
+    width: 35%;
+    margin-right: 5%;
+  }
 }
 
 /*# sourceMappingURL=compiled.css.map */
